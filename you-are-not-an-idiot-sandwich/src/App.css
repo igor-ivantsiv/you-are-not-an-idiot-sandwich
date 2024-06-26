@@ -4,3 +4,22 @@
   padding: 2rem;
   text-align: center;
 }
+.recipeImage {
+  width: 50%;
+  height: 218px;
+}
+.recipeCard{
+  display: flex;
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 20px auto;
+}
+.content {
+  width: 1000px;
+  margin: 0 auto;
+}
+.cardContent {
+  text-align: left;
+  margin: 10px;
+}
