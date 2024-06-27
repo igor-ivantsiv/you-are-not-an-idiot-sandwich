@@ -5,7 +5,7 @@ function List() {
 
     return (
 
-    recipes.map((eachRecipe)=>{
+      recipesData.map((eachRecipe)=>{
       return <ListItem key ={eachRecipe.id} recipe={ eachRecipe } />
     })
 
