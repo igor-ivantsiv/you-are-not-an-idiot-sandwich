@@ -1,11 +1,12 @@
-// Dashboard / My recipes page
 import List from "../components/List.jsx";
 
-function HomePage(){
-    return <>
-    <h1>My recipes</h1>
-    <List />
+function HomePage({ functionData, handleDelete }) {
+  return (
+    <>
+      <h1>My recipes</h1>
+      <List functionData={functionData} handleDelete={handleDelete} />
     </>
+  );
 }
 
-export default HomePage
+export default HomePage;

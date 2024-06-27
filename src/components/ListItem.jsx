@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function ListItem({ recipe, handleDelete }) {
   return (
     <>
@@ -17,9 +19,11 @@ function ListItem({ recipe, handleDelete }) {
             <strong>Servings: </strong>
             {recipe.servings}
           </p>
+          <Link to ={`/recipes/${recipe.id}`}>
           <button type="button" className="detailButton">
             Details
           </button>
+          </Link>
           <button
             type="button"
             className="deleteButton"

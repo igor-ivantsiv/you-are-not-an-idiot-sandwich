@@ -7,20 +7,39 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-// import recipeDetails from "./pages/RecipeDetails";
+import RecipeDetails from "./pages/RecipeDetails";
 import About from "./pages/About";
 import AddRecipe from "./pages/AddRecipe";
 import EditRecipe from "./pages/EditRecipe";
 
-function App() { 
+import recipesData from "./assets/recipes.json";
+
+function App() {
+  const [functionData, setFunctionData] = useState(recipesData);
+
+  const handleDelete = (recipeId) => {
+    const filteredData = functionData.filter(
+      (currentRecipe) => currentRecipe.id !== recipeId
+    );
+    setFunctionData(filteredData);
+  };
+
   return (
     <>
       <div className="pages">
         <Navbar />
-        <Sidebar/>
+        <Sidebar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          {/*<Route path="/recipes/:recipeId" element={<recipeDetails />} />*/}
+          <Route
+            path="/"
+            element={
+              <HomePage
+                functionData={functionData}
+                handleDelete={handleDelete}
+              />
+            }
+          />
+          <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/add-recipe" element={<AddRecipe />} />
           <Route path="/recipes/:recipeId/edit" element={<EditRecipe />} />

@@ -1,13 +1,23 @@
+import { Link } from "react-router-dom"
+
 function Navbar() {
   return (
     <>
       <section className="navbard">
+        <Link to="/">
         <img src="" alt="logo" />
+        </Link>
+        <Link to="/">
         <div>company name</div>
+        </Link>
         <img src="" alt="menu icon" />
         <div>
-          <a href="">Home</a>
-          <a href="">About Us</a>
+        <Link to="/">
+          <p>Home</p>
+          </Link>
+          <Link to="/About">
+          <p>About Us</p>
+          </Link>
         </div>
       </section>
     </>
