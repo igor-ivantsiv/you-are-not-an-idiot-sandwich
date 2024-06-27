@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom"
+import logo from "../assets/logo.png"
+import menu from "../assets/menu.png"
 
 function Navbar() {
   return (
     <>
-      <section className="navbard">
+      <section className="navbar">
+        <div className="mainNav">
         <Link to="/">
-        <img src="" alt="logo" />
+        <img className="logo" src={logo} alt="logo" />
         </Link>
         <Link to="/">
-        <div>company name</div>
+        <div>Idiot Sandwich</div>
         </Link>
-        <img src="" alt="menu icon" />
-        <div>
+        <img className="menu" src={menu} alt="menu icon" />
+        </div>
+        <div className="menuNav">
         <Link to="/">
           <p>Home</p>
           </Link>
