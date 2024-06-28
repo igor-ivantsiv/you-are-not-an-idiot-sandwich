@@ -3,6 +3,9 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 
 function AddRecipe({ functionData, setFunctionData }) {
+const navigate = useNavigate()
+
+
   const initNewRecipe = {
     id: uuidv4(),
     name: "",
@@ -25,6 +28,9 @@ function AddRecipe({ functionData, setFunctionData }) {
     setFunctionData([newRecipe, ...functionData]);
 
     setNewRecipe(initNewRecipe);
+
+    navigate("/")
+
   };
 
   /*function handleImageChange(event) {

@@ -42,7 +42,7 @@ function App() {
           <Route path="/recipes/:recipeId" element={<RecipeDetails functionData={functionData} />} />
           <Route path="/about" element={<About />} />
           <Route path="/add-recipe" element={<AddRecipe functionData={functionData} setFunctionData={setFunctionData}/>} />
-          <Route path="/recipes/:recipeId/edit" element={<EditRecipe />} />
+          <Route path="/recipes/:recipeId/edit" element={<EditRecipe functionData={functionData} setFunctionData={setFunctionData} />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

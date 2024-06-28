@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function recipeDetails( {functionData} ){
 
@@ -8,6 +8,9 @@ function recipeDetails( {functionData} ){
 
     return <>
     <h1>{currentRecipe.name}</h1>
+    <Link to={`/recipes/${currentRecipe.id}/edit`}>
+    <button type="button">Edit</button>
+    </Link>
     </>
 }
 
