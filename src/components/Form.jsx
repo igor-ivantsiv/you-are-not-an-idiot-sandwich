@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Form({ functionData, setFunctionData, formType, recipeId }) {
   const navigate = useNavigate();
@@ -32,9 +33,8 @@ function Form({ functionData, setFunctionData, formType, recipeId }) {
       navigate("/");
     };
     return (
-      <form onSubmit={handleSubmit}>
-        <span>Add a Recipe</span>
-        <div>
+      <form onSubmit={handleSubmit} >
+        <div className="addCard">
           <label>
             Recipe name
             <input
@@ -86,7 +86,12 @@ function Form({ functionData, setFunctionData, formType, recipeId }) {
               <input type="file" accept="image/*" onChange={handleImageChange} />
             </label>*/}
 
-          <button type="submit">Add Recipe</button>
+<div className="formButtons">
+<button type="submit" className="submitButton">Add a Recipe</button>
+<Link to="/">
+<button type="button">Back</button>
+</Link>
+</div>
         </div>
       </form>
     );
@@ -116,9 +121,8 @@ function Form({ functionData, setFunctionData, formType, recipeId }) {
       setUpdatedRecipe({ ...updatedRecipe, [currentName]: currentValue });
     };
     return (
-      <form onSubmit={handleSubmit}>
-        <span>Add a Recipe</span>
-        <div>
+      <form onSubmit={handleSubmit} >
+        <div className="addCard">
           <label>
             Recipe name
             <input
@@ -169,8 +173,14 @@ function Form({ functionData, setFunctionData, formType, recipeId }) {
                   Upload Image
                   <input type="file" accept="image/*" onChange={handleImageChange} />
                 </label>*/}
+<div className="formButtons">
+<button type="submit" className="submitButton">Update Recipe</button>
+<Link to={`/recipes/${currentRecipe.id}`}>
+<button type="button">Back</button>
+</Link>
 
-          <button type="submit">Update Recipe</button>
+</div>
+
         </div>
       </form>
     );

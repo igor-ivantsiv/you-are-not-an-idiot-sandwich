@@ -16,6 +16,7 @@
 }
 .links {
   text-decoration: none;
+  color: #213547;
 }
 .links:hover {
   text-decoration: none;
@@ -28,8 +29,9 @@ body {
 }
 .menu{
   background-color: #BE7C4D;
+ 
   width: 160px;
-  height: 100vh;
+  height: calc(100vh - 84px);
   position: absolute;
   right:-160px;
   transition: right 0.9s ease;
@@ -43,6 +45,7 @@ body {
   padding: 10px;
   border-bottom: #213547 solid 1px;
   text-align: left;
+  font-weight: 600;
 }
 
 h1 {

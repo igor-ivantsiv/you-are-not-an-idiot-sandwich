@@ -20,7 +20,7 @@ function Navbar() {
             <img className="logo" src={logo} alt="logo" />
           </Link>
           <Link className="links" to="/"> 
-            <p className="pageName">You are Not an Idiot Sandwich</p>
+            <p className="pageName">You are NOT an Idiot Sandwich</p>
           </Link>
           <img onClick={toggleMenu} className="menuIcon" src={menu} alt="menu icon" />
         </div>
