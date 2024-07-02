@@ -19,6 +19,7 @@ function ListItem({ recipe, handleDelete }) {
             <strong>Servings: </strong>
             {recipe.servings}
           </p>
+          <div className="buttonsDiv">
           <Link to ={`/recipes/${recipe.id}`}>
           <button type="button" className="detailButton">
             Details
@@ -31,6 +32,8 @@ function ListItem({ recipe, handleDelete }) {
           >
             Delete
           </button>
+          </div>
+
         </div>
       </div>
     </>
