@@ -7,8 +7,10 @@
 
 ### Introduction
 
-- [Introduction](#Introduction)
+- [Introduction](#introduction)
 - [The Team](#the-team)
+- [Project organization](#project-organization)
+- [React features](#react-features)
 - [Set it up](#set-it-up)
 - [Submit it to revision](#submit-it-to-revision)
 - [Contributing to Not an idiot sandwich](#contributing-to-not-an-idiot-sandwich)
@@ -19,9 +21,31 @@ We seeked to build a functional, reliable and user friendly webpage to anyone wh
 
 ### The Team
 
-![Igor Ivantsiv](https://media.licdn.com/dms/image/C4D03AQE0LjJcFBbA9w/profile-displayphoto-shrink_800_800/0/1597045454391?e=1725494400&v=beta&t=omE_B4vQiVKVbc4BQ6-fW75oZW6ar6WycOAi3lUilGs)
+![Igor Ivantsiv](https://media.licdn.com/dms/image/C4D03AQE0LjJcFBbA9w/profile-displayphoto-shrink_800_800/0/1597045454391?e=1725494400&v=beta&t=omE_B4vQiVKVbc4BQ6-fW75oZW6ar6WycOAi3lUilGs)![Santiago Mora](https://media.licdn.com/dms/image/D4D03AQGI9Ar-MFyllA/profile-displayphoto-shrink_800_800/0/1689816326993?e=1725494400&v=beta&t=xxTwYppOd_CYrqyv5WruQGbBVRBM1a76yf8mL-ebanY)
 
-![Santiago Mora](https://media.licdn.com/dms/image/D4D03AQGI9Ar-MFyllA/profile-displayphoto-shrink_800_800/0/1689816326993?e=1725494400&v=beta&t=xxTwYppOd_CYrqyv5WruQGbBVRBM1a76yf8mL-ebanY)
+### Project organization
+
+Serving the well practice purpose, we first create folders for the corresponding uses. First, the assets, where the data and images will be imported from. In here we will retrieve the images, logos or data that will be displayed later on.
+
+Then, we kept in mind the importance of dividing "components" inside a folder, so we create one and add inside it the footer, form, list, the item list, navbar and the sidebar. In this way the webpage will display the needed components.
+
+Inside the pages, we want to display different kind of content and serving different purposes. About, AddRecipe, EditRecipe, HomePage, NotFound and RecipeDetails are the different pages you'll encounter.
+
+We made use of the Routes, Route and Link for giving access to different pages on the web, with these, we can interconect them and avoid reloading the page. Then, in the App.jsx, we add every element from the components and their paths to the desired pages.
+
+Finally, in the main.jsx we can see the App.jsx element, encapsulated on the Router. In each case, we imported the necessary elements.
+
+We have some functionalities as adding a recipe (as a form) or editing a recipe. Also, we can navigate back to the main page by clicking on the navbar, show and hide the menu through a click and accessing any food, by clicking on it, delete it with the delete <button> or see the details depending on the kind of food we want more information about.
+
+### React features
+
+- Router, Routes, Route and Link
+- Asynchronous promises
+- Functions and callbacks
+- Forms
+- useParams()
+- useState()
+- HOF(.filter())
 
 
 
