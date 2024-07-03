@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import santiago from "../assets/santiago.png"
+import santiago from "../assets/santi.png"
 import igor from "../assets/igor.png"
 
 function About() {
