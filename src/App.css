@@ -51,6 +51,7 @@
   width: 238px;
   margin: 10px;
   height: 238px;
+  object-fit: cover;
 }
 
 input {
@@ -112,4 +113,27 @@ img.menuIcon {
 .aboutText {
   text-align: left;
   font-size: 20px;
+}
+
+footer{
+  background-color: #be5a38;
+  padding: 5px 0;
+}
+a:-webkit-any-link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footerList{
+  color: black;
+  display: flex;
+    list-style-type: none;
+    padding-inline-end: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.envelope{
+  width: 20px;
 }
