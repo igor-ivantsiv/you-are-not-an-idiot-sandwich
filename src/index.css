@@ -25,7 +25,8 @@ body {
   background-color: #C1B4AE;
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: calc(100vh - 66px);
+  padding-bottom: 66px;
 }
 .menu{
   background-color: #BE7C4D;

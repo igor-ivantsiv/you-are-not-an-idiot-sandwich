@@ -11,7 +11,7 @@ function Form({ functionData, setFunctionData, formType, recipeId }) {
       id: uuidv4(),
       name: "",
       calories: 0,
-      image: "",
+      image: "", 
       servings: 1,
     };
 

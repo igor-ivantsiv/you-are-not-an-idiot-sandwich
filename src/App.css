@@ -3,6 +3,11 @@
   width: 100%;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 .recipeImage {
   width: 100%;
   margin: 10px;
@@ -117,7 +122,10 @@ img.menuIcon {
 
 footer{
   background-color: #be5a38;
-  padding: 5px 0;
+  padding: 5px 0; 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 a:-webkit-any-link {
   color: black;
